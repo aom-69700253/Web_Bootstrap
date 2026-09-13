@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+<!--Menu-->
+<div id="menu-container"></div>
+
+
+ <!-- Content here -->
+<div class="container">
+
+    <h3 class="alert alert-warning  mt-4">หน้าหลัก</h3>
+    
+<div class="alert alert-info text-start" role="alert">
+ Jantima Piampin
+</div>
+
+<div class="text-end"> 
+<a class="btn bg-primary-subtle" href="https://www.google.com/">Google</a> 
+</div> 
+</div> <!-- end container --> <br>
+
+<!-- แบ่งคอลัมน์ด้วย Grid System -->
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-4  bg-warning-subtle">
+      <h4 class="text-muted">ดอกทานตะวัน</h4>
+      <img src="image/images (1).jpg" width="100%">
+    </div>
+    <div class="col-sm-4  bg-warning-subtle">
+      <h4 class="text-muted">ดอกทานตะวัน</h4>
+      <img src="image/images (1).jpg" width="100%">
+    </div>
+    <div class="col-sm-4  bg-warning-subtle">
+      <h4 class="text-muted">ลงทะเบียน</h4>
+
+      <form class="text-start">
+  <div class="mb-3">
+    <label class="form-label">Firstname</label>
+    <input type="email" class="form-control" id="Firstname">
+  </div>
+
+    <div class="mb-3">
+    <label class="form-label">Lastname</label>
+    <input type="text" class="form-control" id="Lastname">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Telephone</label>
+    <input type="tel" class="form-control" id="Phone">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Province</label>
+    <select class="form-select" aria-label="Default select example">
+  <option selected>เลือกจังหวัด</option>
+  <option value="1">ชลบุรี</option>
+  <option value="2">ระยอง</option>
+  <option value="3">กรุงเทพ</option>
+</select> <br>
+
+<div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div> 
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" id="pw">
+  </div>
+  
+  <button type="submit" class="btn bg-primary-subtle">Submit</button>
+  <button type="reset" class="btn bg-primary-subtle">Cancel</button>
+</form>
+    </div> 
+
+    </div>
+  </div>
+</div>
+
+  </div> <!-- end row -->
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+ <script src="js/bootstrap.bundle.min.js" ></script>
+
+ <script>
+   // โหลด menu.js
+    fetch("menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("menu-container").innerHTML = data;
+
+            // ✅ re-bind toggle หลังจากเมนูถูก inject
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                });
+            }
+        });
+
+
+
+ </script>
